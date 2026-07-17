@@ -1,0 +1,92 @@
+/* ---------------------------------------------------------------------------
+   Design tokens — patrick-portfolio
+   Two worlds, one system: light shell + dark media rooms.
+   Rooms scope via [data-room="dark"]; every color role flips there.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* -- color: light shell ------------------------------------------------- */
+  --bg: oklch(1 0 0);
+  --surface: oklch(0.96 0.003 205);
+  --surface-2: oklch(0.925 0.005 205);
+  --ink: oklch(0.17 0 0);
+  --muted: oklch(0.44 0.008 205);
+  --line: oklch(0.88 0.004 205);
+  --primary: oklch(0.52 0.1 205);
+  --primary-strong: oklch(0.42 0.09 207);
+  --accent: oklch(0.62 0.16 35);
+  --on-fill: oklch(0.99 0 0);
+
+  /* media always sits on dark ground, even in the light shell */
+  --media-ground: oklch(0.14 0.004 205);
+
+  /* -- type --------------------------------------------------------------- */
+  --font: 'Archivo Variable', system-ui, -apple-system, sans-serif;
+
+  /* widths (font-stretch %) — the three voices of the single family */
+  --w-display: 118%;
+  --w-body: 100%;
+  --w-meta: 80%;
+
+  /* fluid modular scale, ratio ~1.28 at desktop */
+  --text-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.8rem);
+  --text-sm: clamp(0.84rem, 0.8rem + 0.2vw, 0.94rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --text-xl: clamp(1.5rem, 1.32rem + 0.9vw, 1.9rem);
+  --text-2xl: clamp(1.9rem, 1.6rem + 1.5vw, 2.55rem);
+  --text-3xl: clamp(2.4rem, 1.9rem + 2.5vw, 3.4rem);
+  --text-display: clamp(2.9rem, 1.4rem + 7.5vw, 6rem);
+
+  /* -- space (fluid) ------------------------------------------------------ */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --space-l: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
+  --space-xl: clamp(3.5rem, 2.6rem + 4vw, 6rem);
+  --space-2xl: clamp(5rem, 3.5rem + 7vw, 9.5rem);
+
+  /* -- layout ------------------------------------------------------------- */
+  --container: 1400px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --measure: 68ch;
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+
+  /* -- z scale ------------------------------------------------------------ */
+  --z-nav: 100;
+  --z-menu: 200;
+  --z-lightbox-backdrop: 300;
+  --z-lightbox: 310;
+  --z-toast: 400;
+
+  /* -- motion ------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* expo-ish */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --dur-micro: 180ms;
+  --dur-reveal: 600ms;
+  --dur-room: 750ms;
+
+  color-scheme: light;
+  accent-color: var(--primary);
+}
+
+/* -- dark media rooms ------------------------------------------------------ */
+[data-room='dark'] {
+  --bg: oklch(0.12 0 0);
+  --surface: oklch(0.17 0.004 205);
+  --surface-2: oklch(0.21 0.005 205);
+  --ink: oklch(0.96 0 0);
+  --muted: oklch(0.76 0.006 205);
+  --line: oklch(0.28 0.005 205);
+  --primary: oklch(0.78 0.11 200);
+  --primary-strong: oklch(0.85 0.1 198);
+  --accent: oklch(0.72 0.15 35);
+  --on-fill: oklch(0.13 0 0);
+  --media-ground: oklch(0.17 0.004 205);
+
+  color-scheme: dark;
+}

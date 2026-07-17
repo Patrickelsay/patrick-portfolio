@@ -1,0 +1,117 @@
+/* ---------------------------------------------------------------------------
+   Work index — head, filters, mixed grid
+--------------------------------------------------------------------------- */
+
+.work-head {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-l);
+}
+
+.work-head h1 {
+  font-size: var(--text-display);
+}
+
+.work-lede {
+  margin-top: var(--space-s);
+  font-size: var(--text-lg);
+  color: var(--muted);
+}
+
+.work-lede a {
+  color: var(--primary-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: var(--space-l);
+}
+
+.work-filter {
+  padding: 0.45em 1.1em;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-stretch: var(--w-meta);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out),
+    background var(--dur-micro) var(--ease-out);
+}
+
+.work-filter:hover {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+
+.work-filter[aria-pressed='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+.work-intro {
+  margin-top: var(--space-m);
+  padding: var(--space-s) var(--space-m);
+  background: var(--surface);
+  border-radius: var(--radius-m);
+  color: var(--ink);
+}
+
+.work-grid-wrap {
+  padding-bottom: var(--space-2xl);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-m) var(--space-m);
+}
+
+/* six-cell rhythm: wide, half, third… — never a uniform card wall */
+.work-cell-0 {
+  grid-column: span 4;
+}
+
+.work-cell-1 {
+  grid-column: span 2;
+}
+
+.work-cell-2,
+.work-cell-3,
+.work-cell-4 {
+  grid-column: span 2;
+}
+
+.work-cell-5 {
+  grid-column: span 4;
+}
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work-cell-0,
+  .work-cell-5 {
+    grid-column: span 2;
+  }
+
+  .work-cell-1,
+  .work-cell-2,
+  .work-cell-3,
+  .work-cell-4 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .work-grid > * {
+    grid-column: span 2 !important;
+  }
+}

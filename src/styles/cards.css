@@ -1,0 +1,119 @@
+/* ---------------------------------------------------------------------------
+   Cards — shared by Home, Work, and anywhere ProjectCard renders
+--------------------------------------------------------------------------- */
+
+/* -- project card ------------------------------------------------------------ */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  text-decoration: none;
+  height: 100%;
+}
+
+.project-card-media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: var(--media-ground);
+  aspect-ratio: 16 / 11;
+  flex: 1;
+}
+
+.project-card-large .project-card-media {
+  aspect-ratio: 16 / 9;
+}
+
+.project-card-media img,
+.project-card-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out);
+}
+
+.project-card:hover .project-card-media img {
+  transform: scale(1.035);
+}
+
+.project-card-video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 300ms var(--ease-out);
+}
+
+.project-card:hover .project-card-video,
+.project-card:focus-visible .project-card-video {
+  opacity: 1;
+}
+
+.project-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-card-title {
+  font-stretch: var(--w-display);
+  font-weight: 750;
+  font-size: var(--text-lg);
+  letter-spacing: -0.015em;
+}
+
+.project-card:hover .project-card-title {
+  color: var(--primary-strong);
+}
+
+.project-card-tagline {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  max-width: 52ch;
+}
+
+/* -- reel teaser (vertical video card) --------------------------------------- */
+
+.reel-teaser {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: 320px;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--media-ground);
+  text-decoration: none;
+}
+
+.reel-teaser video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-teaser-label {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: var(--space-m) var(--space-s) var(--space-s);
+  background: linear-gradient(to top, oklch(0.1 0 0 / 0.85), transparent);
+  color: oklch(0.97 0 0);
+}
+
+.reel-teaser-label strong {
+  font-stretch: var(--w-display);
+  font-weight: 750;
+  font-size: var(--text-lg);
+}
+
+.reel-teaser-label span {
+  font-stretch: var(--w-meta);
+  font-size: var(--text-sm);
+  color: oklch(0.82 0.02 200);
+}

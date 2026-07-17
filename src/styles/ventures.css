@@ -1,0 +1,138 @@
+/* ---------------------------------------------------------------------------
+   Ventures — GetExpanded live-venture room
+--------------------------------------------------------------------------- */
+
+.ventures-head {
+  padding-top: var(--space-xl);
+}
+
+.ventures-head h1 {
+  font-size: var(--text-display);
+  margin-top: var(--space-s);
+}
+
+.ventures-tagline {
+  margin-top: var(--space-s);
+  font-size: var(--text-lg);
+  color: var(--muted);
+}
+
+.ventures-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.ventures-hero {
+  margin-top: var(--space-xl);
+}
+
+.ventures-hero img {
+  border-radius: var(--radius-l);
+  box-shadow: 0 30px 100px oklch(0 0 0 / 0.6);
+}
+
+.ventures-story {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: var(--space-xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+}
+
+.ventures-what h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-s);
+}
+
+.ventures-numbers dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-l) var(--space-m);
+  padding: var(--space-l);
+  background: var(--surface);
+  border-radius: var(--radius-l);
+}
+
+.ventures-numbers dd {
+  font-stretch: var(--w-display);
+  font-weight: 800;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.ventures-numbers > dl > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ventures-numbers-note {
+  margin-top: var(--space-s);
+}
+
+/* -- proof grid --------------------------------------------------------------- */
+
+.ventures-proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-l) var(--space-m);
+  padding-bottom: var(--space-xl);
+}
+
+.proof-wide {
+  grid-column: 1 / -1;
+  max-width: 62rem;
+  justify-self: center;
+}
+
+.proof-item img,
+.proof-item video {
+  width: 100%;
+  border-radius: var(--radius-m);
+  background: var(--surface);
+}
+
+.proof-item p {
+  margin-top: 0.6rem;
+}
+
+/* -- flywheel ------------------------------------------------------------------ */
+
+.ventures-clip {
+  padding-bottom: var(--space-2xl);
+}
+
+.ventures-clip-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.ventures-clip-video video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  max-width: 320px;
+}
+
+.ventures-clip h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-s);
+}
+
+@media (max-width: 900px) {
+  .ventures-story,
+  .ventures-clip-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ventures-proof {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1515 @@
+{
+ "about/portrait": {
+  "w": 2384,
+  "h": 4240,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "og": true
+ },
+ "about/creator": {
+  "w": 3000,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "about/creator-camera": {
+  "w": 3000,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "about/studio": {
+  "w": 1096,
+  "h": 1370,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "about/laptop-smile": {
+  "w": 3000,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "about/street": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "about/bts-kitchen": {
+  "w": 3000,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/topdisplay-hero": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "wobbly/box-cover": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/jenga-box": {
+  "w": 1103,
+  "h": 1500,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/jenga-play": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/hape-crane": {
+  "w": 800,
+  "h": 600,
+  "widths": [
+   480
+  ]
+ },
+ "wobbly/wheel-cards": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/blocks": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/fusion-wip": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/render-hero": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "wobbly/render-action": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/render-profile": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/story-render": {
+  "w": 3300,
+  "h": 2550,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/hero-annotated": {
+  "w": 2388,
+  "h": 1668,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "og": true
+ },
+ "waf/wow-header": {
+  "w": 6492,
+  "h": 2743,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "waf/poster-board": {
+  "w": 12813,
+  "h": 22813,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/process-board": {
+  "w": 12813,
+  "h": 22813,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/render-side": {
+  "w": 2388,
+  "h": 1668,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/render-worn": {
+  "w": 1668,
+  "h": 2388,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/render-three-quarter": {
+  "w": 2388,
+  "h": 1668,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/render-open": {
+  "w": 2388,
+  "h": 1668,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/hero-interface": {
+  "w": 3000,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "sg1/context-counter": {
+  "w": 2500,
+  "h": 1281,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "sg1/context-kitchen": {
+  "w": 3000,
+  "h": 1219,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/context-hood": {
+  "w": 3000,
+  "h": 1800,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/context-oven": {
+  "w": 3000,
+  "h": 1800,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/grill-open": {
+  "w": 3000,
+  "h": 1800,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/pot-closed": {
+  "w": 3000,
+  "h": 1800,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/hero-display": {
+  "w": 5745,
+  "h": 3830,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "motus/front": {
+  "w": 1164,
+  "h": 698,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "motus/side": {
+  "w": 1034,
+  "h": 704,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "motus/fold-sequence": {
+  "w": 600,
+  "h": 600,
+  "widths": [
+   480
+  ]
+ },
+ "motus/frame-only": {
+  "w": 3603,
+  "h": 5405,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/detail": {
+  "w": 6000,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/pair": {
+  "w": 6000,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/hero-print": {
+  "w": 3083,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "fob/thumb-press": {
+  "w": 2619,
+  "h": 2444,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/parts": {
+  "w": 3007,
+  "h": 3007,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/shell": {
+  "w": 3129,
+  "h": 2676,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/render": {
+  "w": 2000,
+  "h": 1500,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/render-cad": {
+  "w": 1638,
+  "h": 1213,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "fob/original": {
+  "w": 640,
+  "h": 480,
+  "widths": [
+   480
+  ]
+ },
+ "matrix/hero-home": {
+  "w": 1334,
+  "h": 750,
+  "widths": [
+   480,
+   960
+  ],
+  "og": true
+ },
+ "matrix/hero-side": {
+  "w": 750,
+  "h": 1334,
+  "widths": [
+   480
+  ]
+ },
+ "matrix/sketch-figures": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "matrix/workshop-build": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "matrix/folded-flat": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "matrix/wood-prototype": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "matrix/steel-core": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/hero-ultimate": {
+  "w": 5100,
+  "h": 3300,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "gillette/ring-rotate": {
+  "w": 1280,
+  "h": 493,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "gillette/zoom-ring": {
+  "w": 1280,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "gillette/raze-full": {
+  "w": 1280,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "gillette/glazor-zero": {
+  "w": 3000,
+  "h": 2400,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/sketch-lineup": {
+  "w": 4475,
+  "h": 1281,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/print-model": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "edge/hero-render": {
+  "w": 1439,
+  "h": 598,
+  "widths": [
+   480,
+   960
+  ],
+  "og": true
+ },
+ "edge/context-room": {
+  "w": 3000,
+  "h": 3750,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gameon/hero-launch": {
+  "w": 414,
+  "h": 896,
+  "widths": [
+   414
+  ],
+  "og": true
+ },
+ "gameon/discovery": {
+  "w": 414,
+  "h": 1456,
+  "widths": [
+   414
+  ]
+ },
+ "gameon/discovery-detail": {
+  "w": 414,
+  "h": 1354,
+  "widths": [
+   414
+  ]
+ },
+ "gameon/friends-nearby": {
+  "w": 414,
+  "h": 1069,
+  "widths": [
+   414
+  ]
+ },
+ "gameon/profile": {
+  "w": 414,
+  "h": 1457,
+  "widths": [
+   414
+  ]
+ },
+ "gameon/badges": {
+  "w": 414,
+  "h": 1352,
+  "widths": [
+   414
+  ]
+ },
+ "gameon/platforms": {
+  "w": 414,
+  "h": 896,
+  "widths": [
+   414
+  ]
+ },
+ "lisn/hero-phone": {
+  "w": 657,
+  "h": 1177,
+  "widths": [
+   480
+  ],
+  "og": true
+ },
+ "lisn/screens-display": {
+  "w": 4000,
+  "h": 2667,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lisn/appstore-display": {
+  "w": 8000,
+  "h": 4521,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lisn/display-board": {
+  "w": 8000,
+  "h": 4521,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lisn/hand-mockup": {
+  "w": 4500,
+  "h": 3750,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "webred/ipho-hero": {
+  "w": 1920,
+  "h": 1251,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "webred/ipho-before-after": {
+  "w": 7959,
+  "h": 3289,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "webred/ipho-original": {
+  "w": 1920,
+  "h": 1251,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "pmh/model-top": {
+  "w": 3024,
+  "h": 4032,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "pmh/model-context": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "pmh/model-rooms": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "pmh/model-interior": {
+  "w": 5184,
+  "h": 3456,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "pmh/swatches": {
+  "w": 612,
+  "h": 612,
+  "widths": [
+   480
+  ]
+ },
+ "lip/hero-emblem": {
+  "w": 3000,
+  "h": 3000,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ],
+  "og": true
+ },
+ "lip/rss-red": {
+  "w": 3000,
+  "h": 3000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lip/rss-zoom": {
+  "w": 3000,
+  "h": 3000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lip/logo-white": {
+  "w": 3934,
+  "h": 3934,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "lip/logo-black": {
+  "w": 3934,
+  "h": 3934,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "reshi/logo-white": {
+  "w": 1000,
+  "h": 1000,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "reshi/logo-black": {
+  "w": 1000,
+  "h": 1000,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/feet-study-1": {
+  "w": 5500,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600,
+   2400
+  ]
+ },
+ "sketch/feet-study-3": {
+  "w": 5500,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sketch/feet-study-4": {
+  "w": 5500,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sketch/feet-study-5": {
+  "w": 5500,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sketch/feet-study-6": {
+  "w": 5500,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sketch/puma-render": {
+  "w": 1574,
+  "h": 1548,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/ideation-wall": {
+  "w": 1292,
+  "h": 1530,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/spec-sketch": {
+  "w": 1124,
+  "h": 1346,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/desk-bts": {
+  "w": 750,
+  "h": 1334,
+  "widths": [
+   480
+  ]
+ },
+ "getexpanded/landing": {
+  "w": 1433,
+  "h": 1246,
+  "widths": [
+   480,
+   960
+  ],
+  "og": true
+ },
+ "getexpanded/analytics-year": {
+  "w": 1918,
+  "h": 845,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "getexpanded/analytics-month": {
+  "w": 1918,
+  "h": 837,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "getexpanded/instagram": {
+  "w": 1161,
+  "h": 1153,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "getexpanded/discord": {
+  "w": 1368,
+  "h": 898,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/sketch-weight-system": {
+  "w": 2000,
+  "h": 2589,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/sketch-lineup": {
+  "w": 2000,
+  "h": 2589,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/board-process": {
+  "w": 2000,
+  "h": 1295,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/board-function": {
+  "w": 2000,
+  "h": 1295,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "gillette/board-features": {
+  "w": 2000,
+  "h": 1295,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "matrix/report-cover": {
+  "w": 2000,
+  "h": 2589,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sketch/utensil-book": {
+  "w": 2000,
+  "h": 1455,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "about/bts-desk": {
+  "w": 1905,
+  "h": 1069,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "about/bts-whiteboard": {
+  "w": 681,
+  "h": 1128,
+  "widths": [
+   480
+  ]
+ },
+ "about/bts-analytics": {
+  "w": 687,
+  "h": 1221,
+  "widths": [
+   480
+  ]
+ },
+ "taptab/hero-brand": {
+  "w": 1585,
+  "h": 1221,
+  "widths": [
+   480,
+   960
+  ],
+  "og": true
+ },
+ "taptab/board-intro": {
+  "w": 1583,
+  "h": 1223,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "taptab/board-flows": {
+  "w": 1586,
+  "h": 1228,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "taptab/board-storyboards": {
+  "w": 1580,
+  "h": 1222,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "munch/brand": {
+  "w": 649,
+  "h": 1273,
+  "widths": [
+   480
+  ]
+ },
+ "munch/signin-quiz": {
+  "w": 1038,
+  "h": 367,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "munch/feed-strips": {
+  "w": 387,
+  "h": 459,
+  "widths": [
+   387
+  ]
+ },
+ "munch/profiles": {
+  "w": 625,
+  "h": 823,
+  "widths": [
+   480
+  ]
+ },
+ "sketch/puma-lineup": {
+  "w": 1585,
+  "h": 1225,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/puma-materials": {
+  "w": 1584,
+  "h": 1228,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/puma-colorways": {
+  "w": 1591,
+  "h": 1227,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "sketch/puma-title": {
+  "w": 1590,
+  "h": 1226,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "getexpanded/admin-dashboard": {
+  "w": 1432,
+  "h": 660,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "getexpanded/collabs-july": {
+  "w": 1324,
+  "h": 855,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "getexpanded/collabs-august": {
+  "w": 1334,
+  "h": 945,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/lapse-strip": {
+  "w": 1639,
+  "h": 224,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wobbly/concept-blocks": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/concept-crane": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/concept-materials": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/clay-blocks": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "wobbly/clay-crane": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "getexpanded/site-nav": {
+  "video": true,
+  "w": 1280,
+  "h": 1120,
+  "duration": 23.4
+ },
+ "lip/motion-intro": {
+  "video": true,
+  "w": 1280,
+  "h": 720,
+  "duration": 12.2
+ },
+ "lip/podcast-intro": {
+  "video": true,
+  "w": 1280,
+  "h": 720,
+  "duration": 27.8
+ },
+ "lisn/phone-mockup": {
+  "video": true,
+  "w": 1280,
+  "h": 1280,
+  "duration": 10.7
+ },
+ "webred/ws-dashboard": {
+  "video": true,
+  "w": 1280,
+  "h": 640,
+  "duration": 18
+ },
+ "motus/bts-action": {
+  "video": true,
+  "w": 960,
+  "h": 1280,
+  "duration": 2.7
+ },
+ "matrix/user-testing": {
+  "video": true,
+  "w": 720,
+  "h": 1280,
+  "duration": 9.9
+ },
+ "fob/bts-print": {
+  "video": true,
+  "w": 720,
+  "h": 1280,
+  "duration": 11.8
+ },
+ "bts/fx3-testing": {
+  "video": true,
+  "w": 720,
+  "h": 1280,
+  "duration": 29.4
+ },
+ "remote/bts-story-highlight": {
+  "video": true,
+  "w": 720,
+  "h": 1280,
+  "duration": 218.1,
+  "remote": true
+ },
+ "remote/client-results-highlight": {
+  "video": true,
+  "w": 720,
+  "h": 1280,
+  "duration": 252.6,
+  "remote": true
+ },
+ "remote/waf-film": {
+  "video": true,
+  "w": 1920,
+  "h": 1080,
+  "duration": 95.1,
+  "remote": true
+ },
+ "reels/ai-chatgpt": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 32.6
+ },
+ "reels/boopo-milestone": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 48.4
+ },
+ "reels/brand-pippit": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 62.1
+ },
+ "reels/ugc-remio": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 43.1
+ },
+ "reels/agency-scaling": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 47.1
+ },
+ "reels/growth-settings": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 38.3
+ },
+ "reels/viral-ai-fast": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 21.7
+ },
+ "reels/viral-film-day": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 13.8
+ },
+ "reels/auto-toyota": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 19.8
+ },
+ "reels/auto-hyundai": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 52.2
+ },
+ "reels/akke-jewellery": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 31.8
+ },
+ "reels/wedding-first-look": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 85.1
+ },
+ "reels/after5-pov": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 21.1
+ },
+ "reels/gym-elias": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 12.2
+ },
+ "reels/kellys-phases": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 20
+ },
+ "reels/sherises-bali": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 85.1
+ },
+ "reels/podcast-epicest": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 46.5
+ },
+ "reels/realestate-kd": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 24.2
+ },
+ "reels/retail-cdb": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 37.5
+ },
+ "reels/getexpanded-pod": {
+  "video": true,
+  "w": 540,
+  "h": 960,
+  "duration": 41.9
+ },
+ "waf/sketch-lineup": {
+  "w": 3855,
+  "h": 3066,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/sketch-feet": {
+  "w": 3784,
+  "h": 2905,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/sketch-concept": {
+  "w": 3151,
+  "h": 2342,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "waf/sketch-board-dark": {
+  "w": 3400,
+  "h": 2048,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/proto-appearance": {
+  "w": 6000,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/proto-lift": {
+  "w": 6000,
+  "h": 4000,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/proto-cardboard": {
+  "w": 5089,
+  "h": 3165,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "sg1/proto-white": {
+  "w": 2960,
+  "h": 2761,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/form-lineup": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/steel-forms": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/wood-studies": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "motus/cad-tri": {
+  "w": 283,
+  "h": 270,
+  "widths": [
+   283
+  ]
+ },
+ "motus/usage-sketch": {
+  "w": 5096,
+  "h": 6600,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "harley/board": {
+  "w": 2000,
+  "h": 2750,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "harley/dieline-stripes": {
+  "w": 2000,
+  "h": 2750,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "harley/logo-studies": {
+  "w": 2000,
+  "h": 2750,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ }
+}

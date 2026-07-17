@@ -1,0 +1,23 @@
+# deps / build
+node_modules/
+dist/
+
+# source material (12.5 GB) — never committed; web assets are derived into public/media
+portfolio-assets/
+
+# transcoded long-form videos destined for Supabase storage (see its README)
+supabase-upload/*
+!supabase-upload/README.md
+
+# env
+.env
+.env.local
+.env.*.local
+
+# os / editor
+.DS_Store
+*.local
+
+# logs
+npm-debug.log*
+*.log

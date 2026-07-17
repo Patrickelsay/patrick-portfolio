@@ -1,0 +1,277 @@
+/* ---------------------------------------------------------------------------
+   Home — hero, selected work, venture spotlight, about teaser
+--------------------------------------------------------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: end;
+  gap: var(--space-l);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.hero-name {
+  font-size: var(--text-display);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.04em;
+}
+
+.hero-line {
+  display: block;
+}
+
+.hero-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: var(--space-m);
+}
+
+.hero-role {
+  font-stretch: var(--w-meta);
+  font-weight: 620;
+  font-size: var(--text-sm);
+  color: var(--primary-strong);
+}
+
+.hero-role + .hero-role::before {
+  content: '·';
+  margin-right: 1.25rem;
+  color: var(--line);
+}
+
+.hero-statement {
+  margin-top: var(--space-m);
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.hero-portrait {
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+}
+
+/* -- selected work ---------------------------------------------------------- */
+
+.selected {
+  padding-bottom: var(--space-2xl);
+}
+
+.selected-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-m);
+  margin-bottom: var(--space-l);
+}
+
+.selected-head h2 {
+  font-size: var(--text-3xl);
+}
+
+.selected-all {
+  font-stretch: var(--w-meta);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary-strong);
+}
+
+.selected-all:hover {
+  color: var(--ink);
+}
+
+.selected-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-m);
+}
+
+.cell-0 {
+  grid-column: span 4;
+}
+
+.cell-1 {
+  grid-column: span 2;
+}
+
+.cell-reel {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.cell-3,
+.cell-4 {
+  grid-column: span 2;
+}
+
+.cell-5 {
+  grid-column: span 4;
+}
+
+@media (max-width: 900px) {
+  .selected-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cell-0,
+  .cell-5 {
+    grid-column: span 2;
+  }
+
+  .cell-1,
+  .cell-3,
+  .cell-4 {
+    grid-column: span 1;
+  }
+
+  .cell-reel {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .selected-grid > * {
+    grid-column: span 2 !important;
+  }
+}
+
+/* -- venture spotlight -------------------------------------------------------- */
+
+.venture {
+  padding: var(--space-2xl) 0;
+}
+
+.venture-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.venture-live {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  margin-bottom: var(--space-s);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: live-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--accent) 55%, transparent);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px transparent;
+  }
+}
+
+.venture-text h2 {
+  font-size: var(--text-3xl);
+}
+
+.venture-tagline {
+  margin-top: var(--space-2xs);
+  color: var(--muted);
+  font-size: var(--text-lg);
+}
+
+.venture-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-m) var(--space-l);
+  margin: var(--space-l) 0;
+}
+
+.venture-stats dd {
+  font-stretch: var(--w-display);
+  font-weight: 800;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.venture-stats dt {
+  order: 1;
+  margin-top: 0.15rem;
+}
+
+.venture-stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.venture-media img {
+  border-radius: var(--radius-m);
+  box-shadow: 0 24px 80px oklch(0 0 0 / 0.5);
+}
+
+/* -- about teaser --------------------------------------------------------------- */
+
+.teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: var(--space-xl);
+  align-items: center;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.teaser-media img {
+  border-radius: var(--radius-l);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+}
+
+.teaser-text h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-s);
+}
+
+.teaser-text .btn-ghost {
+  margin-top: var(--space-m);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .venture-inner,
+  .teaser {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero-portrait {
+    order: -1;
+    max-width: 480px;
+  }
+}

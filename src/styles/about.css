@@ -1,0 +1,246 @@
+/* ---------------------------------------------------------------------------
+   About — narrative, lenses, BTS band, contact
+--------------------------------------------------------------------------- */
+
+.about-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--space-xl);
+  align-items: center;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.about-head h1 {
+  font-size: var(--text-display);
+}
+
+.about-lede {
+  margin-top: var(--space-m);
+  font-size: var(--text-lg);
+}
+
+.about-portrait img {
+  border-radius: var(--radius-l);
+}
+
+/* -- story ------------------------------------------------------------------- */
+
+.about-story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding-bottom: var(--space-2xl);
+}
+
+.about-story-text {
+  font-size: var(--text-base);
+}
+
+.about-quote {
+  border-radius: var(--radius-l);
+  padding: var(--space-xl) var(--space-l);
+  max-width: 56rem;
+}
+
+.about-quote blockquote {
+  font-stretch: var(--w-display);
+  font-weight: 750;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 22ch;
+}
+
+/* -- lenses ------------------------------------------------------------------- */
+
+.about-lenses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xl) var(--space-l);
+  padding-bottom: var(--space-2xl);
+}
+
+.about-lens h2 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-s);
+  padding-bottom: var(--space-2xs);
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+}
+
+.about-lens .prose {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  font-size: var(--text-sm);
+}
+
+/* -- bts band ------------------------------------------------------------------ */
+
+.about-bts {
+  padding: var(--space-2xl) 0;
+}
+
+.about-bts h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-l);
+}
+
+.about-bts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-m);
+}
+
+.about-bts-grid img {
+  border-radius: var(--radius-m);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-bts-grid figcaption {
+  margin-top: 0.5rem;
+}
+
+/* -- contact -------------------------------------------------------------------- */
+
+.about-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: var(--space-xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.about-contact h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-s);
+}
+
+.about-contact-info a {
+  color: var(--primary-strong);
+}
+
+.about-resumes {
+  margin-top: var(--space-l);
+}
+
+.about-resumes ul {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-2xs);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.about-resumes a {
+  display: inline-block;
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-stretch: var(--w-meta);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+
+.about-resumes a:hover {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+}
+
+/* -- contact form ----------------------------------------------------------------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 0.8em 1em;
+  transition: border-color var(--dur-micro) var(--ease-out);
+  resize: vertical;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary) 25%, transparent);
+}
+
+.contact-field ::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.contact-form .btn-fill {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form .btn-fill:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-error a {
+  color: var(--primary-strong);
+}
+
+.contact-sent {
+  padding: var(--space-l);
+  background: var(--surface);
+  border-radius: var(--radius-l);
+}
+
+.contact-sent-title {
+  font-stretch: var(--w-display);
+  font-weight: 750;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2xs);
+}
+
+@media (max-width: 900px) {
+  .about-head,
+  .about-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    order: -1;
+    max-width: 420px;
+  }
+
+  .about-lenses {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,178 @@
+/* ---------------------------------------------------------------------------
+   Content channel — the dark reels room
+--------------------------------------------------------------------------- */
+
+.channel {
+  min-height: 100vh;
+}
+
+.channel-head {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-l);
+}
+
+.channel-head h1 {
+  font-size: var(--text-display);
+}
+
+.channel-lede {
+  margin-top: var(--space-m);
+  font-size: var(--text-lg);
+  color: var(--muted);
+}
+
+.channel-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: var(--space-m) var(--space-l);
+  margin-top: var(--space-l);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-l);
+}
+
+.channel-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.channel-stats dd {
+  font-stretch: var(--w-display);
+  font-weight: 800;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+/* -- reels wall -------------------------------------------------------------- */
+
+.reels {
+  padding-bottom: var(--space-2xl);
+}
+
+.reels-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.reels-hint {
+  margin-top: var(--space-s);
+}
+
+.reels-wall {
+  margin-top: var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-m);
+}
+
+/* phones get the familiar 2-up reels grid — half the scroll, same wall */
+@media (max-width: 560px) {
+  .reels-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xs);
+  }
+
+  .reel-title {
+    font-size: var(--text-xs);
+  }
+}
+
+.reel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reel-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.reel-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.reel-title {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+/* -- roster ------------------------------------------------------------------- */
+
+.roster {
+  padding-bottom: var(--space-2xl);
+}
+
+.roster h2 {
+  font-size: var(--text-3xl);
+}
+
+.roster-note {
+  margin-top: var(--space-2xs);
+  color: var(--muted);
+}
+
+.roster-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-l);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.roster-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: var(--space-m);
+  background: var(--bg);
+  transition: background var(--dur-micro) var(--ease-out);
+}
+
+.roster-list li:hover {
+  background: var(--surface);
+}
+
+.roster-name {
+  font-stretch: var(--w-display);
+  font-weight: 700;
+}
+
+/* -- long cuts ----------------------------------------------------------------- */
+
+.showcase {
+  padding-bottom: var(--space-2xl);
+}
+
+.showcase h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-l);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-m);
+}
+
+.showcase-item video {
+  width: 100%;
+  border-radius: var(--radius-m);
+  background: var(--surface);
+}
+
+.showcase-item p {
+  margin-top: 0.5rem;
+}

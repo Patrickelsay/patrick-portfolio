@@ -1,0 +1,1 @@
+{"root":["./vite.config.ts","./scripts/build-assets.ts","./scripts/build-video.ts","./scripts/contact-sheet.ts","./scripts/manifest.ts","./scripts/shoot.ts"],"version":"5.9.3"}
