@@ -6,8 +6,10 @@ import { useContent, useVentureStats } from '../lib/content-store'
 import '../styles/ventures.css'
 
 export default function Ventures() {
-  const { getexpanded: ge } = useContent()
+  const { getexpanded: ge, liveStats } = useContent()
   const stats = useVentureStats()
+  const discordCount =
+    liveStats?.discordMembers ?? stats.find((s) => /discord/i.test(s.label))?.value ?? ''
   return (
     <div data-room="dark" className="ventures">
       <Seo
@@ -75,8 +77,8 @@ export default function Ventures() {
           <p className="meta">The admin side: listings, claims, submissions.</p>
         </Reveal>
         <Reveal delay={0.05} className="proof-item">
-          <SmartImage id={ge.media.discord} alt="The GetExpanded Discord community at 603 members" sizes="(max-width: 700px) 100vw, 46vw" />
-          <p className="meta">The community: 603 members and counting.</p>
+          <SmartImage id={ge.media.discord} alt="The GetExpanded Discord community" sizes="(max-width: 700px) 100vw, 46vw" />
+          <p className="meta">The community: {discordCount} members and counting.</p>
         </Reveal>
         <Reveal delay={0.1} className="proof-item">
           <SmartImage id={ge.media.collabs[0]} alt="July calendar fully booked with weekly live collabs" sizes="(max-width: 700px) 100vw, 46vw" />

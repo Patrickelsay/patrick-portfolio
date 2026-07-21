@@ -40,19 +40,27 @@ Curation lives in `scripts/manifest.ts` — add an entry, re-run, reference the 
 Scripts are idempotent; delete `public/media/<id>*` (and the id from `media-index.json`) to force
 a rebuild of one asset.
 
-## Supabase (one-time setup)
+## Supabase (LIVE — project `patrick-portfolio`, ref ggmeguvpujldaqdidzpn, ca-central-1)
 
-1. Run both migrations in `supabase/migrations/` against your project (SQL editor or
-   `supabase db push`): contact messages, then the CMS tables (`projects`, `site_content`,
-   the `site-media` bucket, RLS policies).
-2. Create a **public** storage bucket named `portfolio-media` and upload the files in
-   `supabase-upload/` (keeps 100 MB of long compilations out of the repo).
-3. Set `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` in `.env` locally and in Coolify.
-4. Seed the CMS from the bundled content:
-   `SUPABASE_URL=... SUPABASE_SERVICE_ROLE=... npx tsx scripts/seed-supabase.ts`
-   (idempotent; `--force` re-pushes copy while preserving your visibility/order edits).
-5. **Auth**: Authentication → Sign In / Up → disable "Allow new users to sign up", then add
-   your admin user (email + password) manually. Only that account can write.
+Provisioned July 21 2026 via the Supabase MCP. Already done: both migrations, CMS seed
+(18 projects + site_content), `site-media` + `portfolio-media` buckets, the three long
+videos uploaded, `discord-count` edge function deployed and pg_cron-scheduled hourly
+(invite code lives in `site_content.config`, editable without redeploying).
+
+Remaining manual steps (dashboard):
+1. **Auth**: Authentication → Sign In / Up → disable "Allow new users to sign up", then
+   add your admin user (email + password) manually. Only that account can write.
+2. **Coolify**: set the two env vars below on the app, then redeploy.
+
+```
+VITE_SUPABASE_URL=https://ggmeguvpujldaqdidzpn.supabase.co
+VITE_SUPABASE_ANON_KEY=<anon key — in local .env; it is the public/publishable key>
+```
+
+Re-seeding after content-file edits (needs the service-role key from the dashboard):
+`SUPABASE_URL=... SUPABASE_SERVICE_ROLE=... npx tsx scripts/seed-supabase.ts [--force]`
+(insert-only by default; `--force` re-pushes copy while preserving visibility/order edits).
+`scripts/generate-seed-sql.ts` emits the same seed as SQL for the MCP/SQL editor.
 
 ## Admin panel (/admin)
 
