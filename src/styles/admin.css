@@ -1,0 +1,477 @@
+/* ---------------------------------------------------------------------------
+   Admin: dark-room control panel. Utilitarian cousin of the public site.
+--------------------------------------------------------------------------- */
+
+.admin {
+  min-height: 100vh;
+  padding-bottom: var(--space-2xl);
+}
+
+.admin-notice,
+.admin-login {
+  padding-top: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-m);
+  max-width: 480px;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  width: 100%;
+}
+
+.admin-login-form .btn-fill {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+/* -- top bar ---------------------------------------------------------------- */
+
+.admin-bar {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.admin-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+  height: 56px;
+}
+
+.admin-title {
+  font-stretch: var(--w-display);
+  font-weight: 800;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.admin-nav a,
+.admin-nav button {
+  font-stretch: var(--w-meta);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.admin-nav a:hover,
+.admin-nav button:hover {
+  color: var(--primary);
+}
+
+/* -- pages ------------------------------------------------------------------- */
+
+.admin-page {
+  padding-top: var(--space-l);
+}
+
+.admin-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.admin-head h1 {
+  font-size: var(--text-2xl);
+}
+
+.admin-head-actions {
+  display: flex;
+  gap: var(--space-s);
+}
+
+.admin-head .btn-fill,
+.admin-savebar .btn-fill {
+  border: none;
+  cursor: pointer;
+}
+
+.admin-hint {
+  margin-top: var(--space-2xs);
+  max-width: 70ch;
+}
+
+.admin-hint a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.admin-inline-toggle {
+  color: var(--primary);
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+/* -- projects list ------------------------------------------------------------ */
+
+.admin-new {
+  margin-top: var(--space-m);
+  padding: var(--space-m);
+  background: var(--surface);
+  border-radius: var(--radius-m);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-m);
+  align-items: end;
+}
+
+.admin-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-m);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+  padding: var(--space-xs) var(--space-s);
+  background: var(--surface);
+  border-radius: var(--radius-s);
+}
+
+.admin-row[data-hidden='true'] {
+  opacity: 0.55;
+}
+
+.admin-row-thumb {
+  flex: 0 0 72px;
+  height: 48px;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  background: var(--surface-2);
+  display: grid;
+  place-items: center;
+}
+
+.admin-row-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-row-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.admin-row-title {
+  font-stretch: var(--w-display);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.admin-row-title:hover {
+  color: var(--primary);
+}
+
+.admin-row-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-row-actions button,
+.admin-rows-tools button {
+  padding: 0.35em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+
+.admin-row-actions button:hover:not(:disabled),
+.admin-rows-tools button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.admin-row-actions button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.admin-toggle[aria-pressed='true'] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-fill);
+}
+
+.admin-danger:hover:not(:disabled) {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* -- editor cards -------------------------------------------------------------- */
+
+.admin-card {
+  margin-top: var(--space-l);
+  padding: var(--space-l);
+  background: var(--surface);
+  border-radius: var(--radius-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.admin-card h2 {
+  font-size: var(--text-xl);
+}
+
+.admin-sub {
+  font-size: var(--text-base);
+  font-stretch: var(--w-meta);
+  color: var(--muted);
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-m);
+}
+
+/* about.css owns .contact-field on the public site but is code-split away
+   from /admin, so the structural rules are repeated here under .admin */
+.admin .contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.admin .contact-field input,
+.admin .contact-field textarea,
+.admin .contact-field select,
+.admin-field input,
+.admin-field textarea,
+.admin-field select,
+.admin-new input,
+.admin-new select,
+.admin-rows input,
+.admin-media input,
+.admin-media-item input,
+.admin-addblock select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  padding: 0.55em 0.8em;
+}
+
+.admin .contact-field input:focus-visible,
+.admin .contact-field textarea:focus-visible,
+.admin-field input:focus-visible,
+.admin-field textarea:focus-visible,
+.admin-rows input:focus-visible,
+.admin-media input:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.admin .contact-error {
+  color: var(--accent);
+}
+
+.admin-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* -- rows editor ---------------------------------------------------------------- */
+
+.admin-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.admin-rows-row {
+  display: flex;
+  gap: var(--space-2xs);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-rows-row input {
+  flex: 1 1 120px;
+  min-width: 100px;
+}
+
+.admin-rows-row .admin-rows-wide {
+  flex: 3 1 240px;
+}
+
+.admin-rows-tools {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-add {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* -- media input ------------------------------------------------------------------ */
+
+.admin-media {
+  display: flex;
+  gap: var(--space-s);
+  align-items: flex-start;
+}
+
+.admin-media-thumb {
+  flex: 0 0 96px;
+  height: 64px;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  background: var(--surface-2);
+  display: grid;
+  place-items: center;
+}
+
+.admin-media-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-media-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.admin-media-controls input[list] {
+  width: 100%;
+}
+
+.admin-media-url {
+  word-break: break-all;
+}
+
+.admin-media-buttons {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.admin-media-buttons button {
+  padding: 0.35em 0.8em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  font-size: var(--text-sm);
+}
+
+.admin-media-buttons button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.admin-media-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.admin-media-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto;
+  gap: var(--space-s);
+  align-items: start;
+  padding: var(--space-xs);
+  background: var(--surface-2);
+  border-radius: var(--radius-s);
+}
+
+/* -- block editor ------------------------------------------------------------------- */
+
+.admin-block {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.admin-block summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  padding: var(--space-xs) var(--space-s);
+  cursor: pointer;
+  background: var(--surface-2);
+  list-style: none;
+}
+
+.admin-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.admin-block-kind {
+  font-stretch: var(--w-meta);
+  font-weight: 650;
+  font-size: var(--text-sm);
+}
+
+.admin-block-preview {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-block-body {
+  padding: var(--space-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.admin-addblock {
+  display: flex;
+  gap: var(--space-s);
+  align-items: center;
+}
+
+.admin-addblock .btn-ghost {
+  cursor: pointer;
+}
+
+.admin-savebar {
+  margin-top: var(--space-m);
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+@media (max-width: 720px) {
+  .admin-row {
+    flex-wrap: wrap;
+  }
+
+  .admin-media-item {
+    grid-template-columns: 1fr;
+  }
+}

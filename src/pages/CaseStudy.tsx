@@ -2,21 +2,24 @@ import { Link, useParams } from 'react-router-dom'
 import { Seo } from '../components/shell/Seo'
 import { SmartImage } from '../components/media/SmartImage'
 import { BlockRenderer } from '../components/case/BlockRenderer'
-import { projectBySlug, nextProject } from '../content/projects'
+import { useProject, useNextProject } from '../lib/content-store'
 import { ogImage } from '../lib/media'
 import NotFound from './NotFound'
 import '../styles/case.css'
 
 export default function CaseStudy() {
   const { slug } = useParams()
-  const project = slug ? projectBySlug.get(slug) : undefined
+  const project = useProject(slug)
+  const next = useNextProject(slug ?? '')
   if (!project) return <NotFound />
-
-  const next = nextProject(project.slug)
 
   return (
     <article>
-      <Seo title={project.title} description={project.summary} image={ogImage(project.hero)} />
+      <Seo
+        title={project.title}
+        description={project.summary}
+        image={typeof project.hero === 'string' ? ogImage(project.hero) : null}
+      />
 
       {/* dark-room hero */}
       <header className="case-hero" data-room="dark">
@@ -53,7 +56,7 @@ export default function CaseStudy() {
           <div className="case-hero-media">
             <SmartImage
               id={project.hero}
-              alt={`${project.title} — hero image`}
+              alt={`${project.title} hero image`}
               sizes="(max-width: 900px) 100vw, 60vw"
               priority
             />

@@ -1,12 +1,12 @@
 import type { Project } from '../types'
 
 /**
- * Tier 1 — authored. Copy converted 1:1 from
+ * Tier 1: authored. Copy converted 1:1 from
  * portfolio-assets/.../wobbly-bridge-content.md (the finished narrative).
  * Deviations from the source file:
  * - the "research infographic" placeholder is omitted (file missing from batch)
  * - the "future ideas (draft, replace before publishing)" list is omitted
- * - concept_board_1–3 (missing Spin_Master_Toy_3_concept.pdf) are stood in
+ * - concept_board_1-3 (missing Spin_Master_Toy_3_concept.pdf) are stood in
  *   by the surviving concept sketch sheets
  */
 export const wobblyBridge: Project = {
@@ -21,7 +21,7 @@ export const wobblyBridge: Project = {
   tier: 1,
   hero: 'wobbly/topdisplay-hero',
   card: 'wobbly/box-cover',
-  summary: 'A competitive tabletop toy that teaches weight and balance through play — from Spin Master brief to CAD-built game system.',
+  summary: 'A competitive tabletop toy that teaches weight and balance through play, from Spin Master brief to CAD-built game system.',
   featured: true,
   blocks: [
     {
@@ -63,9 +63,9 @@ export const wobblyBridge: Project = {
       kind: 'grid',
       cols: 3,
       items: [
-        { media: 'wobbly/jenga-box', caption: 'Jenga, tension as a toy — reference' },
-        { media: 'wobbly/jenga-play', caption: 'The laugh at the fall — reference' },
-        { media: 'wobbly/hape-crane', caption: 'Hape crane, construction play — reference' },
+        { media: 'wobbly/jenga-box', caption: 'Jenga, tension as a toy, reference' },
+        { media: 'wobbly/jenga-play', caption: 'The laugh at the fall, reference' },
+        { media: 'wobbly/hape-crane', caption: 'Hape crane, construction play, reference' },
       ],
     },
     {
@@ -81,9 +81,9 @@ export const wobblyBridge: Project = {
       kind: 'list',
       ordered: true,
       items: [
-        'Balance Blocks (selected) — load a tilting bridge, manage the weight, keep the fewest blocks on your side.',
-        'Target Twist — a reaction pad, tap, hold, and double hit to chase a high score.',
-        'Angry Genie — turn the knob, push your luck, hope the cap pops on someone else.',
+        'Balance Blocks (selected): load a tilting bridge, manage the weight, keep the fewest blocks on your side.',
+        'Target Twist: a reaction pad, tap, hold, and double hit to chase a high score.',
+        'Angry Genie: turn the knob, push your luck, hope the cap pops on someone else.',
       ],
     },
     {
@@ -136,7 +136,7 @@ export const wobblyBridge: Project = {
       items: [
         { label: 'Players', value: '2' },
         { label: 'Ages', value: '8 to 12' },
-        { label: 'Block weights', value: '3 — wood/light, brick/medium, steel/heavy' },
+        { label: 'Block weights', value: '3: wood/light, brick/medium, steel/heavy' },
       ],
     },
     {
@@ -144,7 +144,7 @@ export const wobblyBridge: Project = {
       cols: 2,
       items: [
         { media: 'wobbly/wheel-cards', caption: 'The spinner wheel and wild card deck' },
-        { media: 'wobbly/blocks', caption: 'Wood, brick, and steel — the material set' },
+        { media: 'wobbly/blocks', caption: 'Wood, brick, and steel, the material set' },
       ],
     },
     {

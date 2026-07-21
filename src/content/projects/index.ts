@@ -20,7 +20,7 @@ import {
   sketchbook,
 } from './tier3'
 
-/** Display order for the /work grid — deliberate rhythm, not alphabetical. */
+/** Display order for the /work grid: deliberate rhythm, not alphabetical. */
 export const projects: Project[] = [
   wobblyBridge,
   waterActivityFootwear,

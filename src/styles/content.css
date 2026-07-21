@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   Content channel — the dark reels room
+   Content channel: the dark reels room
 --------------------------------------------------------------------------- */
 
 .channel {
@@ -19,6 +19,14 @@
   margin-top: var(--space-m);
   font-size: var(--text-lg);
   color: var(--muted);
+}
+
+.channel-proof {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  margin-top: var(--space-l);
 }
 
 .channel-stats {
@@ -66,7 +74,7 @@
   gap: var(--space-m);
 }
 
-/* phones get the familiar 2-up reels grid — half the scroll, same wall */
+/* phones get the familiar 2-up reels grid: half the scroll, same wall */
 @media (max-width: 560px) {
   .reels-wall {
     grid-template-columns: repeat(2, minmax(0, 1fr));

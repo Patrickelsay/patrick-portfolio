@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Seo } from '../components/shell/Seo'
 import { Reveal } from '../components/shell/Reveal'
 import { VideoPlayer } from '../components/media/VideoPlayer'
-import { reels, contentStats, clientRoster, remoteShowcase } from '../content/content-channel'
+import { useContent } from '../lib/content-store'
 import { videoSrc } from '../lib/media'
 import '../styles/content.css'
 
@@ -15,6 +15,9 @@ const lanes = [
 
 export default function ContentChannel() {
   const [lane, setLane] = useState<(typeof lanes)[number]['key']>('all')
+  const {
+    contentChannel: { reels, stats: contentStats, roster: clientRoster, remoteShowcase, instagramPortfolio },
+  } = useContent()
   const visible = lane === 'all' ? reels : reels.filter((r) => r.lane === lane)
   const showcase = remoteShowcase.filter((v) => videoSrc(v.id))
 
@@ -22,7 +25,7 @@ export default function ContentChannel() {
     <div data-room="dark" className="channel">
       <Seo
         title="Content"
-        description="Short-form content and marketing — reels, client results, and the personal brand engine."
+        description="Short-form content and marketing: reels, client results, and the personal brand engine."
       />
 
       <header className="channel-head container">
@@ -32,10 +35,16 @@ export default function ContentChannel() {
           engine
         </h1>
         <p className="channel-lede prose">
-          Content starts with emotion — then execution, delivery, and authenticity. Four years of
+          Content starts with emotion. Then execution, delivery, and authenticity. Four years of
           agency work, 30 videos a month at peak, and a personal brand documenting how AI and
           automation multiply all of it.
         </p>
+        <div className="channel-proof">
+          <a className="btn-fill" href={instagramPortfolio} target="_blank" rel="noreferrer">
+            See it live on Instagram ↗
+          </a>
+          <span className="meta">The creator portfolio, straight from the platform.</span>
+        </div>
         <dl className="channel-stats">
           {contentStats.map((s) => (
             <div key={s.label}>
@@ -59,7 +68,7 @@ export default function ContentChannel() {
             </button>
           ))}
         </div>
-        <p className="meta reels-hint">Reels play silently as you scroll — tap one for sound.</p>
+        <p className="meta reels-hint">Reels play silently as you scroll. Tap one for sound.</p>
         <div className="reels-wall">
           {visible.map((reel, i) => (
             <Reveal key={reel.id} delay={(i % 4) * 0.04} className="reel">
@@ -80,7 +89,7 @@ export default function ContentChannel() {
         <Reveal>
           <h2 id="roster-heading">Brands I’ve grown</h2>
           <p className="prose roster-note">
-            Organic short-form strategies across ten industries — filmed, edited, planned, and
+            Organic short-form strategies across ten industries: filmed, edited, planned, and
             tracked through to leads.
           </p>
         </Reveal>

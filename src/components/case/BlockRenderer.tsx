@@ -1,15 +1,18 @@
-import type { Block } from '../../content/types'
+import type { Block, MediaRef } from '../../content/types'
 import { SmartImage } from '../media/SmartImage'
 import { VideoPlayer } from '../media/VideoPlayer'
-import { isVideo } from '../../lib/media'
+import { isVideo, isUpload } from '../../lib/media'
 import { Reveal } from '../shell/Reveal'
 
-function MediaAny({ id, alt, sizes }: { id: string; alt: string; sizes?: string }) {
+function MediaAny({ id, alt, sizes }: { id: MediaRef; alt: string; sizes?: string }) {
+  if (isUpload(id)) {
+    return id.video ? <VideoPlayer id={id} label={alt} /> : <SmartImage id={id} alt={alt} sizes={sizes} />
+  }
   if (isVideo(id)) return <VideoPlayer id={id} label={alt} />
   return <SmartImage id={id} alt={alt} sizes={sizes} />
 }
 
-function Figure({ media, caption, sizes }: { media: string; caption?: string; sizes?: string }) {
+function Figure({ media, caption, sizes }: { media: MediaRef; caption?: string; sizes?: string }) {
   return (
     <figure className="case-figure">
       <MediaAny id={media} alt={caption ?? ''} sizes={sizes} />

@@ -11,7 +11,7 @@ export default function About() {
     <>
       <Seo
         title="About"
-        description="Cofounder of GetExpanded, content creator, Carleton industrial design grad — the person behind the work."
+        description="Cofounder of GetExpanded, content creator, Carleton industrial design grad. The person behind the work."
         image="/media/about/portrait-og.jpg"
       />
 
@@ -27,7 +27,7 @@ export default function About() {
         <Reveal className="about-portrait">
           <SmartImage
             id="about/portrait"
-            alt="Patrick El-Sayegh — portrait"
+            alt="Patrick El-Sayegh, portrait"
             sizes="(max-width: 900px) 90vw, 38vw"
             priority
           />
@@ -86,7 +86,7 @@ export default function About() {
           <Reveal>
             <h2>Say hey</h2>
             <p className="prose">
-              Fastest route is email — <a href={`mailto:${site.email}`}>{site.email}</a>. Or use the
+              Fastest route is email: <a href={`mailto:${site.email}`}>{site.email}</a>. Or use the
               form; it lands in the same place.
             </p>
             <div className="about-resumes">

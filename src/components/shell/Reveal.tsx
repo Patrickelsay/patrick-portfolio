@@ -12,7 +12,7 @@ interface Props {
 
 /**
  * Scroll-into-view rise. Content is fully visible without JS-triggered
- * classes — the motion library only *adds* the entrance; reduced motion
+ * classes: the motion library only *adds* the entrance; reduced motion
  * gets a plain crossfade-free render.
  */
 export function Reveal({ children, delay = 0, className, y = 28 }: Props) {

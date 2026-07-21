@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   Work index — head, filters, mixed grid
+   Work index: head, filters, mixed grid
 --------------------------------------------------------------------------- */
 
 .work-head {
@@ -73,7 +73,7 @@
   gap: var(--space-m) var(--space-m);
 }
 
-/* six-cell rhythm: wide, half, third… — never a uniform card wall */
+/* six-cell rhythm: wide, half, third…: never a uniform card wall */
 .work-cell-0 {
   grid-column: span 4;
 }

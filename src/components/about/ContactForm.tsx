@@ -23,7 +23,7 @@ export function ContactForm() {
     if (!name || !email || !message) return
 
     if (!supabase) {
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
+      const body = encodeURIComponent(`${message}\n\n- ${name} (${email})`)
       window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
         `Portfolio contact from ${name}`,
       )}&body=${body}`
@@ -45,7 +45,7 @@ export function ContactForm() {
   if (status === 'sent') {
     return (
       <div className="contact-sent" role="status">
-        <p className="contact-sent-title">Got it — talk soon.</p>
+        <p className="contact-sent-title">Got it. Talk soon.</p>
         <p className="prose">
           Your message landed. I read everything myself; expect a reply within a couple of days.
         </p>
@@ -72,7 +72,7 @@ export function ContactForm() {
           rows={5}
           required
           maxLength={4000}
-          placeholder="A project, a collab, a question — anything goes."
+          placeholder="A project, a collab, a question, anything goes."
         />
       </label>
       {status === 'error' && (

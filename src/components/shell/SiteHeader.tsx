@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { site } from '../../content/site'
 
-/** Nav links roll up on hover — the duplicate-label slide from the reference site. */
+/** Nav links roll up on hover: the duplicate-label slide from the reference site. */
 function RollLabel({ text }: { text: string }) {
   return (
     <span className="roll" aria-hidden="true">
@@ -31,7 +31,7 @@ export function SiteHeader() {
     <>
     <header className="site-header" data-room={open ? 'dark' : undefined}>
       <div className="site-header-bar container">
-        <Link to="/" className="wordmark" aria-label="Patrick El-Sayegh — home">
+        <Link to="/" className="wordmark" aria-label="Patrick El-Sayegh, home">
           PE<span className="wordmark-dot">.</span>
         </Link>
 

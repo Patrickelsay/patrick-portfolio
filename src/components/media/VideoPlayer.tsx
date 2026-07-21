@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { mediaOrNull, posterSrc, videoSrc } from '../../lib/media'
+import type { MediaRef } from '../../content/types'
+import { mediaOrNull, posterSrc, videoSrc, isUpload } from '../../lib/media'
 
 interface Props {
-  id: string
+  /** pipeline video id or an admin-uploaded { url, w, h, video: true } */
+  id: MediaRef
   /** muted loop that plays while in view (reels, ambient clips) */
   ambient?: boolean
   className?: string
@@ -19,8 +21,10 @@ const prefersReducedMotion = () =>
  * render nothing when Supabase isn't configured.
  */
 export function VideoPlayer({ id, ambient, className, label }: Props) {
-  const entry = mediaOrNull(id)
-  const src = entry ? videoSrc(id) : null
+  const upload = isUpload(id) ? id : null
+  const entry = upload ?? (typeof id === 'string' ? mediaOrNull(id) : null)
+  const src = upload ? upload.url : entry && typeof id === 'string' ? videoSrc(id) : null
+  const poster = !upload && typeof id === 'string' ? posterSrc(id) : undefined
   const ref = useRef<HTMLVideoElement>(null)
   const [engaged, setEngaged] = useState(false)
 
@@ -44,7 +48,7 @@ export function VideoPlayer({ id, ambient, className, label }: Props) {
     <video
       ref={ref}
       className={className}
-      poster={posterSrc(id)}
+      poster={poster}
       width={entry.w}
       height={entry.h}
       preload="none"

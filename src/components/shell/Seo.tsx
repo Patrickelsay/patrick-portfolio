@@ -20,7 +20,7 @@ function setMeta(attr: 'name' | 'property', key: string, content: string) {
 
 export function Seo({ title, description, image }: Props) {
   useEffect(() => {
-    const fullTitle = title ? `${title} — ${site.name}` : site.title
+    const fullTitle = title ? `${title} · ${site.name}` : site.title
     document.title = fullTitle
     const desc = description ?? site.description
     setMeta('name', 'description', desc)

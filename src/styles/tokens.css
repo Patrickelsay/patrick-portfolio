@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   Design tokens — patrick-portfolio
+   Design tokens: patrick-portfolio
    Two worlds, one system: light shell + dark media rooms.
    Rooms scope via [data-room="dark"]; every color role flips there.
 --------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@
   /* -- type --------------------------------------------------------------- */
   --font: 'Archivo Variable', system-ui, -apple-system, sans-serif;
 
-  /* widths (font-stretch %) — the three voices of the single family */
+  /* widths (font-stretch %): the three voices of the single family */
   --w-display: 118%;
   --w-body: 100%;
   --w-meta: 80%;

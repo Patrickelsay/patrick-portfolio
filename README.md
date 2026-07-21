@@ -42,11 +42,42 @@ a rebuild of one asset.
 
 ## Supabase (one-time setup)
 
-1. Run `supabase/migrations/20260717_contact_messages.sql` against your project
-   (SQL editor or `supabase db push`). Insert-only RLS for anon; read via service role/dashboard.
+1. Run both migrations in `supabase/migrations/` against your project (SQL editor or
+   `supabase db push`): contact messages, then the CMS tables (`projects`, `site_content`,
+   the `site-media` bucket, RLS policies).
 2. Create a **public** storage bucket named `portfolio-media` and upload the files in
    `supabase-upload/` (keeps 100 MB of long compilations out of the repo).
 3. Set `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` in `.env` locally and in Coolify.
+4. Seed the CMS from the bundled content:
+   `SUPABASE_URL=... SUPABASE_SERVICE_ROLE=... npx tsx scripts/seed-supabase.ts`
+   (idempotent; `--force` re-pushes copy while preserving your visibility/order edits).
+5. **Auth**: Authentication → Sign In / Up → disable "Allow new users to sign up", then add
+   your admin user (email + password) manually. Only that account can write.
+
+## Admin panel (/admin)
+
+Sign in at `/admin` to: create/edit/delete projects, reorder them (public display order),
+toggle visibility (hidden projects vanish from the site and their URLs 404), star projects
+as featured on the home grid, edit every section block (text, images, grids, stats, process
+strips), upload new images/videos (stored in the `site-media` bucket), and edit site data:
+GetExpanded traction numbers, content-page stats/roster/reels, hero + footer copy, and the
+Instagram portfolio link. Changes go live on the next page load; no rebuild.
+
+Without Supabase env vars the public site renders the bundled fallback content and `/admin`
+explains what to configure.
+
+## Live Discord member count
+
+`supabase/functions/discord-count` fetches your server's member count from a permanent
+invite link and writes it to `site_content.live_stats`; the site splices it over the manual
+Discord stat. Deploy + schedule (needs the Supabase CLI once):
+
+```bash
+supabase functions deploy discord-count --no-verify-jwt
+supabase secrets set DISCORD_INVITE_CODE=<code from discord.gg/<code>>
+```
+
+Then schedule it hourly with the SQL comment at the top of the function file (pg_cron).
 
 ## Deploy (Coolify)
 

@@ -5,9 +5,7 @@ import { Reveal } from '../components/shell/Reveal'
 import { SmartImage } from '../components/media/SmartImage'
 import { VideoPlayer } from '../components/media/VideoPlayer'
 import { ProjectCard } from '../components/work/ProjectCard'
-import { projects } from '../content/projects'
-import { site } from '../content/site'
-import { getExpanded } from '../content/getexpanded'
+import { useContent, useProjects, useVentureStats } from '../lib/content-store'
 import '../styles/home.css'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -31,7 +29,9 @@ function HeroLine({ text, delay }: { text: string; delay: number }) {
 
 export default function Home() {
   const reduced = useReducedMotion()
-  const featured = projects.filter((p) => p.featured)
+  const { site, getexpanded: getExpanded } = useContent()
+  const ventureStats = useVentureStats()
+  const featured = useProjects().filter((p) => p.featured)
 
   return (
     <>
@@ -123,7 +123,7 @@ export default function Home() {
             <h2 id="venture-heading">{getExpanded.name}</h2>
             <p className="prose venture-tagline">{getExpanded.tagline}</p>
             <dl className="venture-stats">
-              {getExpanded.stats.map((s) => (
+              {ventureStats.map((s) => (
                 <div key={s.label}>
                   <dt className="meta">{s.label}</dt>
                   <dd>{s.value}</dd>
@@ -137,7 +137,7 @@ export default function Home() {
           <Reveal delay={0.1} className="venture-media">
             <SmartImage
               id="getexpanded/landing"
-              alt="The GetExpanded directory landing page — find airway orthodontists near you"
+              alt="The GetExpanded directory landing page: find airway orthodontists near you"
               sizes="(max-width: 900px) 90vw, 46vw"
             />
           </Reveal>

@@ -1,6 +1,6 @@
 import type { Project } from '../types'
 
-/** Tier 3 — gallery projects: title, context, one-liner, imagery. */
+/** Tier 3 gallery projects: title, context, one-liner, imagery. */
 
 export const munch: Project = {
   slug: 'munch',
@@ -11,12 +11,12 @@ export const munch: Project = {
   tags: ['UI design', 'social', 'branding'],
   tier: 3,
   hero: 'munch/brand',
-  summary: 'In-progress UI exploration for a food-review community — bold yellow, bitten-cookie mark, feed-first layouts.',
+  summary: 'In-progress UI exploration for a food-review community: bold yellow, bitten-cookie mark, feed-first layouts.',
   blocks: [
     {
       kind: 'text',
       body: [
-        'Munch is a working exploration for a social platform where food lovers post honest reviews of what they actually ate. The visual language is appetite-forward: a bitten-cookie mark, ketchup-and-mustard palette, and photo-first feed strips. Shown as-is from the working files — this one’s still cooking.',
+        'Munch is a working exploration for a social platform where food lovers post honest reviews of what they actually ate. The visual language is appetite-forward: a bitten-cookie mark, ketchup-and-mustard palette, and photo-first feed strips. Shown as-is from the working files. This one’s still cooking.',
       ],
     },
     {
@@ -26,7 +26,7 @@ export const munch: Project = {
         { media: 'munch/brand', caption: 'The mark and homepage explorations' },
         { media: 'munch/signin-quiz', caption: 'Sign-in and taste-quiz onboarding' },
         { media: 'munch/profiles', caption: 'Profiles and messaging flows' },
-        { media: 'munch/feed-strips', caption: 'Feed strips — the food stays the hero' },
+        { media: 'munch/feed-strips', caption: 'Feed strips, where the food stays the hero' },
       ],
     },
   ],
@@ -43,20 +43,20 @@ export const websiteRedesigns: Project = {
   tier: 3,
   hero: 'webred/ipho-hero',
   cardVideo: 'webred/ws-dashboard',
-  summary: 'Two freelance rebuilds — iPho Ottawa’s restaurant site and a stock-trading dashboard concept.',
+  summary: 'Two freelance rebuilds: iPho Ottawa’s restaurant site and a stock-trading dashboard concept.',
   blocks: [
     {
       kind: 'text',
       body: [
-        'Freelance rebuild work: iPho Vietnamese (Ottawa Byward Market) went from a text-heavy orange template to a photography-led site where the food does the selling. Alongside it, a trading-dashboard rebrand — holdings, performance, and buy/sell flows tightened into one clean card system.',
+        'Freelance rebuild work: iPho Vietnamese (Ottawa Byward Market) went from a text-heavy orange template to a photography-led site where the food does the selling. Alongside it, a trading-dashboard rebrand: holdings, performance, and buy/sell flows tightened into one clean card system.',
       ],
     },
     {
       kind: 'compare',
       before: 'webred/ipho-original',
       after: 'webred/ipho-hero',
-      beforeLabel: 'Before — the original site',
-      afterLabel: 'After — the redesign',
+      beforeLabel: 'Before: the original site',
+      afterLabel: 'After: the redesign',
     },
     {
       kind: 'media',
@@ -75,7 +75,7 @@ export const princessMargaret: Project = {
   tags: ['interior design', 'model making', 'healthcare'],
   tier: 3,
   hero: 'pmh/model-top',
-  summary: 'A hospital-interior renovation concept — space planning and material palette, prototyped as physical scale models.',
+  summary: 'A hospital-interior renovation concept: space planning and material palette, prototyped as physical scale models.',
   blocks: [
     {
       kind: 'text',
@@ -87,7 +87,7 @@ export const princessMargaret: Project = {
       kind: 'grid',
       cols: 2,
       items: [
-        { media: 'pmh/model-top', caption: 'Plan view — the full unit layout' },
+        { media: 'pmh/model-top', caption: 'Plan view: the full unit layout' },
         { media: 'pmh/model-interior', caption: 'Inside the lounge' },
         { media: 'pmh/model-rooms', caption: 'Room studies on the presentation boards' },
         { media: 'pmh/swatches', caption: 'Material palette by room' },
@@ -98,7 +98,7 @@ export const princessMargaret: Project = {
 
 export const lipPodcast: Project = {
   slug: 'lip-podcast',
-  title: 'LIP — Lighter Issue Podcast',
+  title: 'LIP: Lighter Issue Podcast',
   tagline: 'A full brand system for a podcast that keeps it light.',
   year: '2021',
   domain: 'creative',
@@ -108,27 +108,27 @@ export const lipPodcast: Project = {
   hero: 'lip/hero-emblem',
   card: 'lip/rss-red',
   cardVideo: 'lip/motion-intro',
-  summary: 'Logo, cover art, RSS artwork, social mockups, and animated intros — a podcast brand built end to end.',
+  summary: 'Logo, cover art, RSS artwork, social mockups, and animated intros. A podcast brand built end to end.',
   featured: true,
   blocks: [
     {
       kind: 'text',
       title: 'The whole package',
       body: [
-        'LIP needed everything a podcast brand touches: a mark, cover art, RSS artwork, social presence, and motion intros. The identity came out of a design-sprint branding workshop — glossy “lip” script with a lighter flame tucked into the i, red and black doing the heavy lifting.',
+        'LIP needed everything a podcast brand touches: a mark, cover art, RSS artwork, social presence, and motion intros. The identity came out of a design-sprint branding workshop: glossy “lip” script with a lighter flame tucked into the i, red and black doing the heavy lifting.',
       ],
     },
     {
       kind: 'media',
       media: 'lip/hero-emblem',
-      caption: 'The cover emblem — gloss on black.',
+      caption: 'The cover emblem: gloss on black.',
       full: true,
     },
     {
       kind: 'grid',
       cols: 3,
       items: [
-        { media: 'lip/rss-red', caption: 'RSS artwork — the red field' },
+        { media: 'lip/rss-red', caption: 'RSS artwork: the red field' },
         { media: 'lip/rss-zoom', caption: 'Zoom crop for small tiles' },
         { media: 'lip/logo-white', caption: 'The mark, reversed' },
       ],
@@ -136,7 +136,7 @@ export const lipPodcast: Project = {
     {
       kind: 'media',
       media: 'lip/motion-intro',
-      caption: 'The animated intro — the mark in motion.',
+      caption: 'The animated intro: the mark in motion.',
     },
     {
       kind: 'media',
@@ -146,7 +146,7 @@ export const lipPodcast: Project = {
     {
       kind: 'text',
       body: [
-        'Every export in the system — YouTube, Instagram, Twitter, RSS tiles — came from one master file, so the brand survives every crop the platforms throw at it.',
+        'Every export in the system (YouTube, Instagram, Twitter, RSS tiles) came from one master file, so the brand survives every crop the platforms throw at it.',
       ],
     },
   ],
@@ -162,12 +162,12 @@ export const reshiJewelry: Project = {
   tags: ['logo design', 'branding'],
   tier: 3,
   hero: 'reshi/logo-white',
-  summary: 'An ornamental RJ monogram for a jewellery brand — the chandelier earring is the logo.',
+  summary: 'An ornamental RJ monogram for a jewellery brand. The chandelier earring is the logo.',
   blocks: [
     {
       kind: 'text',
       body: [
-        'Reshi sells ornate, traditional jewellery — so the mark is one. The RJ monogram sits inside a chandelier-earring silhouette, drawn so the filigree reads at full size and simplifies cleanly when it’s stamped small.',
+        'Reshi sells ornate, traditional jewellery, so the mark is one. The RJ monogram sits inside a chandelier-earring silhouette, drawn so the filigree reads at full size and simplifies cleanly when it’s stamped small.',
       ],
     },
     {
@@ -190,15 +190,15 @@ export const harleyChocolate: Project = {
   tags: ['packaging', 'graphic design'],
   tier: 3,
   hero: 'harley/board',
-  summary: 'A university packaging exercise — Harley-Davidson brand language wrapped around a chocolate bar.',
+  summary: 'A university packaging exercise: Harley-Davidson brand language wrapped around a chocolate bar.',
   blocks: [
     {
       kind: 'text',
       body: [
-        'A packaging one-off: take a brand with a fierce visual identity and put it on the least likely product. The bar leans into Harley’s bar-and-shield equity — black, orange, chrome — while the die-line does the real work of making it feel like garage hardware, not candy.',
+        'A packaging one-off: take a brand with a fierce visual identity and put it on the least likely product. The bar leans into Harley’s bar-and-shield equity (black, orange, chrome) while the die-line does the real work of making it feel like garage hardware, not candy.',
       ],
     },
-    { kind: 'media', media: 'harley/board', caption: 'Final artwork — the die-line, flat.', full: true },
+    { kind: 'media', media: 'harley/board', caption: 'Final artwork: the die-line, flat.', full: true },
     {
       kind: 'grid',
       cols: 2,
@@ -220,7 +220,7 @@ export const sketchbook: Project = {
   tier: 3,
   hero: 'sketch/puma-render',
   card: 'sketch/feet-study-1',
-  summary: 'The drawing practice underneath the product work — digital footwear studies and a Puma concept series.',
+  summary: 'The drawing practice underneath the product work: digital footwear studies and a Puma concept series.',
   blocks: [
     {
       kind: 'text',
@@ -246,10 +246,10 @@ export const sketchbook: Project = {
       kind: 'grid',
       cols: 2,
       items: [
-        { media: 'sketch/puma-render', caption: 'Hero concept — strap-lock trail runner' },
+        { media: 'sketch/puma-render', caption: 'Hero concept: strap-lock trail runner' },
         { media: 'sketch/puma-lineup', caption: 'Colorway lineup' },
         { media: 'sketch/puma-materials', caption: 'Annotated materials board' },
-        { media: 'sketch/ideation-wall', caption: 'The ideation wall — where every concept starts' },
+        { media: 'sketch/ideation-wall', caption: 'The ideation wall, where every concept starts' },
       ],
     },
     {

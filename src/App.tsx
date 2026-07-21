@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Lenis from 'lenis'
 import { SiteHeader } from './components/shell/SiteHeader'
 import { ClosingCTA } from './components/shell/ClosingCTA'
+import { ContentProvider } from './lib/content-store'
 
 const Home = lazy(() => import('./pages/Home'))
 const Work = lazy(() => import('./pages/Work'))
@@ -11,6 +12,7 @@ const ContentChannel = lazy(() => import('./pages/ContentChannel'))
 const Ventures = lazy(() => import('./pages/Ventures'))
 const About = lazy(() => import('./pages/About'))
 const NotFound = lazy(() => import('./pages/NotFound'))
+const AdminApp = lazy(() => import('./pages/admin/AdminApp'))
 
 export default function App() {
   const location = useLocation()
@@ -34,12 +36,14 @@ export default function App() {
     window.scrollTo(0, 0)
   }, [location.pathname])
 
+  const isAdmin = location.pathname.startsWith('/admin')
+
   return (
-    <>
+    <ContentProvider>
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <SiteHeader />
+      {!isAdmin && <SiteHeader />}
       <main id="main">
         <Suspense fallback={null}>
           <Routes>
@@ -49,11 +53,12 @@ export default function App() {
             <Route path="/content" element={<ContentChannel />} />
             <Route path="/ventures" element={<Ventures />} />
             <Route path="/about" element={<About />} />
+            <Route path="/admin/*" element={<AdminApp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
-      <ClosingCTA />
-    </>
+      {!isAdmin && <ClosingCTA />}
+    </ContentProvider>
   )
 }

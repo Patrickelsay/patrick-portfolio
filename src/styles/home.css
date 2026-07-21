@@ -1,10 +1,10 @@
 /* ---------------------------------------------------------------------------
-   Home — hero, selected work, venture spotlight, about teaser
+   Home: hero, selected work, venture spotlight, about teaser
 --------------------------------------------------------------------------- */
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: end;
   gap: var(--space-l);
   padding-top: var(--space-xl);
@@ -60,11 +60,14 @@
   border-radius: var(--radius-l);
   overflow: hidden;
   background: var(--surface);
+  align-self: stretch;
+  min-height: 460px;
 }
 
 .hero-portrait img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* -- selected work ---------------------------------------------------------- */
@@ -272,6 +275,11 @@
 
   .hero-portrait {
     order: -1;
-    max-width: 480px;
+    min-height: 0;
+    align-self: auto;
+  }
+
+  .hero-portrait img {
+    aspect-ratio: 4 / 3;
   }
 }

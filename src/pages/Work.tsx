@@ -2,23 +2,24 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { Seo } from '../components/shell/Seo'
 import { Reveal } from '../components/shell/Reveal'
 import { ProjectCard } from '../components/work/ProjectCard'
-import { projects } from '../content/projects'
+import { useProjects } from '../lib/content-store'
 import { domains, domainIntros } from '../content/site'
 import '../styles/work.css'
 
 export default function Work() {
   const [params, setParams] = useSearchParams()
+  const projects = useProjects()
   const active = params.get('d') ?? 'all'
   const filtered = active === 'all' ? projects : projects.filter((p) => p.domain === active)
   const intro = domainIntros[active]
 
   return (
     <>
-      <Seo title="Work" description="Product design, UX/UI, and creative work — case studies and galleries." />
+      <Seo title="Work" description="Product design, UX/UI, and creative work: case studies and galleries." />
       <section className="work-head container">
         <h1>Work</h1>
         <p className="work-lede prose">
-          Case studies across product design, UX/UI, and creative — plus the{' '}
+          Case studies across product design, UX/UI, and creative, plus the{' '}
           <Link to="/content">content engine</Link> and the{' '}
           <Link to="/ventures">venture I’m building now</Link>.
         </p>

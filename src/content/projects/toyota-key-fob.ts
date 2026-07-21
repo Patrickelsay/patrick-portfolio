@@ -11,13 +11,13 @@ export const toyotaKeyFob: Project = {
   hero: 'fob/hero-print',
   card: 'fob/thumb-press',
   cardVideo: 'fob/bts-print',
-  summary: 'From calipers on the original to a printed shell that clicks — a precision CAD and print exercise.',
+  summary: 'From calipers on the original to a printed shell that clicks: a precision CAD and print exercise.',
   blocks: [
     {
       kind: 'text',
       title: 'The exercise',
       body: [
-        'Take a real product, measure everything, rebuild it in CAD, and print a shell the original electronics snap back into. It sounds mechanical until the tolerances start arguing — every wall thickness, boss, and clip on the original Toyota fob exists for a reason, and the print has to honor all of them.',
+        'Take a real product, measure everything, rebuild it in CAD, and print a shell the original electronics snap back into. It sounds mechanical until the tolerances start arguing. Every wall thickness, boss, and clip on the original Toyota fob exists for a reason, and the print has to honor all of them.',
       ],
     },
     {
@@ -30,9 +30,9 @@ export const toyotaKeyFob: Project = {
       kind: 'grid',
       cols: 3,
       items: [
-        { media: 'fob/original', caption: 'The donor — original Toyota fob' },
+        { media: 'fob/original', caption: 'The donor: the original Toyota fob' },
         { media: 'fob/parts', caption: 'Printed shell beside the original board' },
-        { media: 'fob/thumb-press', caption: 'It clicks — LED and all' },
+        { media: 'fob/thumb-press', caption: 'It clicks, LED and all' },
       ],
     },
     {
@@ -41,7 +41,7 @@ export const toyotaKeyFob: Project = {
       items: [
         { media: 'fob/render-cad', caption: 'The rebuilt CAD model' },
         { media: 'fob/render', caption: 'Final render' },
-        { media: 'fob/shell', caption: 'Shell interior — clips and bosses reproduced' },
+        { media: 'fob/shell', caption: 'Shell interior, clips and bosses reproduced' },
         { media: 'fob/bts-print', caption: 'Off the print bed' },
       ],
     },

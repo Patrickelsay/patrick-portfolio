@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import type { Project } from '../../content/types'
 import { SmartImage } from '../media/SmartImage'
-import { isVideo, posterSrc, videoSrc } from '../../lib/media'
+import { isVideo, isUpload, posterSrc, videoSrc } from '../../lib/media'
 
 interface Props {
   project: Project
@@ -24,7 +24,11 @@ const domainLabel: Record<string, string> = {
 export function ProjectCard({ project, large }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const cardMedia = project.card ?? project.hero
-  const hoverVideo = project.cardVideo && videoSrc(project.cardVideo)
+  const hoverVideo = project.cardVideo
+    ? isUpload(project.cardVideo)
+      ? project.cardVideo.url
+      : videoSrc(project.cardVideo)
+    : null
 
   const play = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -45,7 +49,7 @@ export function ProjectCard({ project, large }: Props) {
       onBlur={stop}
     >
       <span className="project-card-media">
-        {isVideo(cardMedia) ? (
+        {typeof cardMedia === 'string' && isVideo(cardMedia) ? (
           <img src={posterSrc(cardMedia)} alt="" loading="lazy" />
         ) : (
           <SmartImage

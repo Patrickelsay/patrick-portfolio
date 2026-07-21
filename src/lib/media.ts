@@ -1,4 +1,10 @@
 import rawIndex from '../content/media-index.json'
+import type { MediaRef } from '../content/types'
+
+/** Uploaded-media refs are objects; pipeline assets are index-id strings. */
+export function isUpload(ref: MediaRef): ref is { url: string; w: number; h: number; video?: boolean } {
+  return typeof ref === 'object' && ref !== null && 'url' in ref
+}
 
 interface MediaEntry {
   w: number
@@ -18,7 +24,7 @@ export function media(id: string): MediaEntry {
   return entry
 }
 
-/** tolerant lookup — components skip rendering instead of crashing the page */
+/** tolerant lookup: components skip rendering instead of crashing the page */
 export function mediaOrNull(id: string): MediaEntry | null {
   const entry = mediaIndex[id]
   if (!entry && import.meta.env.DEV) console.warn(`unknown media id: ${id}`)
